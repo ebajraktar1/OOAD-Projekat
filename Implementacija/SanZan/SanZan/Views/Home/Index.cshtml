@@ -47,11 +47,6 @@
             <select asp-for="Djelatnost" class="form-control" asp-items="Html.GetEnumSelectList<Djelatnost>()"></select>
             <span asp-validation-for="Djelatnost" class="text-danger"></span>
         </div>
-        <div class="form-group">
-            <label asp-for="Lokacija.Adresa" class="control-label"></label>
-            <input asp-for="Lokacija.Adresa" class="form-control" />
-            <span asp-validation-for="Lokacija.Adresa" class="text-danger"></span>
-        </div>
     </form>
 </div>
 @section Scripts {

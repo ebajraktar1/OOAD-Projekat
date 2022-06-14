@@ -9,7 +9,8 @@ namespace SanZan.Models
 {
     public sealed class GlobalnaStatistika
     {
-        private static GlobalnaStatistika instance = new GlobalnaStatistika();
+        [Key]
+        public int IDGlobalnaStatistika;
         [Display(Name = "Broj korisnika")]
         public static int BrojKorisnika { get; set; } = 0;
         [Display(Name = "Broj oglasa")]
@@ -20,9 +21,5 @@ namespace SanZan.Models
         public static int BrojUspjesnihSaradnji { get; set; } = 0;
 
         private GlobalnaStatistika() { }
-        public static GlobalnaStatistika Instance 
-        {
-            get { return instance; }
-        }
     }
 }
