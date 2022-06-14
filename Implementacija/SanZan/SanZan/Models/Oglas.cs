@@ -18,7 +18,6 @@ namespace SanZan.Models
         public string NazivShopa { get; set; }
         [ForeignKey("Lokacija")]
         public int LokacijaID { get; set; }
-        public Lokacija Lokacija { get; set; }
         public double Ocjena { get; set; }
         [Required]
         public string Opis { get; set; }

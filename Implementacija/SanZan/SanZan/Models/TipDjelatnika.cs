@@ -10,6 +10,7 @@ namespace SanZan.Models
     {
         [Display(Name = "Obični")]
         Obicni,
+        [Display(Name = "Premium")]
         Premium
     }
 }

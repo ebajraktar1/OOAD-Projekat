@@ -13,12 +13,10 @@ namespace SanZan.Models
         public int IDZahtjeva { get; set; }
         [ForeignKey("Korisnik")]
         public int IDKlijenta { get; set; }
-        public Korisnik Korisnik { get; set; }
         public DateTime VrijemeZahtjeva { get; set; }
         [EnumDataType(typeof(Djelatnost))]
         public Djelatnost Djelatnost { get; set; }
         [ForeignKey("Lokacija")]
-        public int? IDLokacija { get; set; }
-        public Lokacija Lokacija { get; set; }
+        public int IDLokacija { get; set; }
     }
 }

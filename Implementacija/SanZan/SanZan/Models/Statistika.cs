@@ -11,8 +11,6 @@ namespace SanZan.Models
     {
         [Key]
         public int IDDjelatnika { get; set; }
-        //treba li ovaj atribut ispod
-        public Korisnik Djelatnik { get; set; }
         [Display(Name = "Broj uspješnih saradnji")]
         public int BrojUspjesnihSaradnji { get; set; }
         [Display(Name = "Broj posjeta")]

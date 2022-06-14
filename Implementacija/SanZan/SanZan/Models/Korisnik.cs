@@ -31,8 +31,7 @@ namespace SanZan.Models
         [RegularExpression(@"[0-9]+", ErrorMessage = "Broj telefona se sastoji samo od brojeva!")]
         public string BrojTelefona { get; set; }
         [ForeignKey("Lokacija")]
-        public int LokacijaId { get; set; } 
-        public Lokacija Lokacija { get; set; } 
+        public int LokacijaId { get; set; }
         public string NazivRadnje { get; set; }
         [EnumDataType(typeof(TipDjelatnika))]
         public TipDjelatnika TipDjelatnika { get; set; }
