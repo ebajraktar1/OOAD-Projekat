@@ -1,0 +1,48 @@
+﻿@model SanZan.Models.InfoPitanje
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link align=" right" text-dark" asp-area="" asp-controller="InfoPitanje" asp-action="Index">Nazad na pitanja</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div>
+        <h4 style="text-align: center ;margin-top: 10%">InfoPitanje</h4>
+        <hr /> <!-- Razbijanje paragrafa, fancy linija -->
+        <dl class="row" style="text-align: center">
+            <dt class="col-lg-12">
+                @Html.DisplayNameFor(model => model.Pitanje)
+            </dt>
+            <dd class="col-lg-12">
+                @Html.DisplayFor(model => model.Pitanje)
+            </dd>
+            <dt class="col-lg-12">
+                @Html.DisplayNameFor(model => model.Odgovor)
+            </dt>
+            <dd class="col-lg-12">
+                @Html.DisplayFor(model => model.Odgovor)
+            </dd>
+        </dl>
+    </div>
+
+    <div>
+        <!--   <a asp-action="Edit" asp-route-id="@Model.IDPitanja">Edit</a> |
+               <a asp-action="Index">Back to List</a>  -->
+    </div>
+</body>

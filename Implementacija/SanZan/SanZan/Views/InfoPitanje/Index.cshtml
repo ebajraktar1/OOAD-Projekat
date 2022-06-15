@@ -1,0 +1,59 @@
+﻿@model IEnumerable<SanZan.Models.InfoPitanje>
+
+@{
+    ViewData["Title"] = "Infopult";
+}
+
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link align="right" text-dark" asp-area="" asp-controller="Home" asp-action="Index">Naslovna</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <table class="table-bordered" style="margin-top: 10%; width: 600px; text-align: center; margin-left: auto; margin-right: auto;">
+        <h1 style="text-align:center">Infopult</h1>
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Pitanje)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Odgovor)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.IDPitanja">@Html.DisplayFor(modelItem => item.Pitanje)</a>
+                    </td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.IDPitanja">@Html.DisplayFor(modelItem => item.Odgovor)</a>
+                    </td>
+                    <!--<td>
+                    <a asp-action="Edit" asp-route-id="@item.IDPitanja">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.IDPitanja">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IDPitanja">Delete</a>
+                </td>-->
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>

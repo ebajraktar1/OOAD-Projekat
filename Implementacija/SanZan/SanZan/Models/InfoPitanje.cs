@@ -15,5 +15,7 @@ namespace SanZan.Models
         public string Pitanje { get; set; }
         [Required]
         public string Odgovor { get; set; }
+
+        public InfoPitanje () { }
     }
 }

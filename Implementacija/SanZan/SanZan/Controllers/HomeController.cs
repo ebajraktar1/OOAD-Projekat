@@ -28,6 +28,11 @@ namespace SanZan.Controllers
             return View();
         }
 
+        public IActionResult InfoPult()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
