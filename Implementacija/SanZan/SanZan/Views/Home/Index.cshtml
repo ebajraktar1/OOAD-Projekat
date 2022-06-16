@@ -12,13 +12,29 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                    <ul class="navbar-nav ml-auto">
+                        <li>
+                            <a class="nav-link text-dark" asp-controller="Korisnik" asp-action="Registracija">Registracija</a>
+                        </li>
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
             </div>
         </nav>
     </header>
+
+    <div class="text-center">
+        <h1 class="display-4">SanZan</h1>
+        <div>
+            <img src="https://github.com/ebajraktar1/OOAD-Projekat/blob/main/Dokumentacija/Specifikacija%20projekta/LogoIcon.png?raw=true">
+        </div>
+        <p>Dobrodošli na našu stranicu</p>
+        <form>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+            </div>
+        </form>
+    </div>
 
     <footer class="border-top footer text-muted">
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white fixed-bottom box-shadow mb-3">
@@ -38,18 +54,7 @@
         </nav>
     </footer>
 </body>
-<div class="text-center">
-    <h1 class="display-4">SanZan</h1>
-    <p>Dobrodošli na našu stranicu</p>
-    <div>
-        <img src="https://github.com/ebajraktar1/OOAD-Projekat/blob/main/Dokumentacija/Specifikacija%20projekta/LogoIcon.png?raw=true">
-    </div>
-    <form>
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <div class="form-group">
-        </div>
-    </form>
-</div>
+
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

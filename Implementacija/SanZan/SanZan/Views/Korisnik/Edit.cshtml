@@ -1,0 +1,89 @@
+﻿@model SanZan.Models.Korisnik
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Korisnik</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IDKorisnika" />
+            <div class="form-group">
+                <label asp-for="KorisnickoIme" class="control-label"></label>
+                <input asp-for="KorisnickoIme" class="form-control" />
+                <span asp-validation-for="KorisnickoIme" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ime" class="control-label"></label>
+                <input asp-for="Ime" class="form-control" />
+                <span asp-validation-for="Ime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Prezime" class="control-label"></label>
+                <input asp-for="Prezime" class="form-control" />
+                <span asp-validation-for="Prezime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lozinka" class="control-label"></label>
+                <input asp-for="Lozinka" class="form-control" />
+                <span asp-validation-for="Lozinka" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IDKartice" class="control-label"></label>
+                <input asp-for="IDKartice" class="form-control" />
+                <span asp-validation-for="IDKartice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BrojTelefona" class="control-label"></label>
+                <input asp-for="BrojTelefona" class="form-control" />
+                <span asp-validation-for="BrojTelefona" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LokacijaId" class="control-label"></label>
+                <input asp-for="LokacijaId" class="form-control" />
+                <span asp-validation-for="LokacijaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NazivRadnje" class="control-label"></label>
+                <input asp-for="NazivRadnje" class="form-control" />
+                <span asp-validation-for="NazivRadnje" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TipDjelatnika" class="control-label"></label>
+                <select asp-for="TipDjelatnika" class="form-control"></select>
+                <span asp-validation-for="TipDjelatnika" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Djelatnost" class="control-label"></label>
+                <select asp-for="Djelatnost" class="form-control"></select>
+                <span asp-validation-for="Djelatnost" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Banovan" /> @Html.DisplayNameFor(model => model.Banovan)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="IDAdministratora" class="control-label"></label>
+                <input asp-for="IDAdministratora" class="form-control" />
+                <span asp-validation-for="IDAdministratora" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
